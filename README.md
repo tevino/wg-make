@@ -1,5 +1,10 @@
 # :pushpin: wg-make
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/tevino/wg-make)](https://goreportcard.com/report/github.com/tevino/wg-make)
+![Build](https://github.com/tevino/wg-make/workflows/Build/badge.svg)
+![Build Releases](https://github.com/tevino/wg-make/workflows/Build%20Releases/badge.svg)
+
+
 `wg-make` is a tool to help set up WireGuard based networks. Currently, it generates configurations for peers according to [a single network description file](#network-description-file).
 
 ```
