@@ -1,6 +1,6 @@
 # :pushpin: wg-make
 
-`wg-make` is a tool to help set up WireGuard based networks. Currently, it generates configurations for peers according to a single configuration file.
+`wg-make` is a tool to help set up WireGuard based networks. Currently, it generates configurations for peers according to [a single configuration file](#network-configuration-file).
 
 ```
 ├── networks
@@ -44,7 +44,7 @@
 
 3. Generate example configurations by running `wg-make -example` in the directory created
 
-4. Modify the example network configuration file (`~/wg-make/networks/example.conf`) to your needs, there are rich comments for every field in it
+4. Modify the example [network configuration file](#network-configuration-file) (`~/wg-make/networks/example.conf`) to your needs, there are rich comments for every field in it
 
 5. Run `wg-make -clean` to generate WireGuard configuration files reflecting your changes
 
