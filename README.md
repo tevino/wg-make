@@ -1,6 +1,6 @@
 # :pushpin: wg-make
 
-`wg-make` is a tool to help set up WireGuard based networks. Currently, it generates configurations for peers according to [a single configuration file](#network-configuration-file).
+`wg-make` is a tool to help set up WireGuard based networks. Currently, it generates configurations for peers according to [a single network description file](#network-description-file).
 
 ```
 ├── networks
@@ -25,7 +25,7 @@
 
 `wg-make` enables you to:
 
-- Version control the configuration files of your networks
+- Version control the configurations of your networks
 - Have an overview of your network in a single file
 
 
@@ -40,26 +40,28 @@
 
 1. Download the latest release of `wg-make` from [here](https://github.com/tevino/wg-make/releases) then install with `install wg-make /usr/bin`
 
-2. Create a working directory for `wg-make`(e.g. `mkdir ~/wg-make`), all configurations will be in here.
+2. Create a working directory for `wg-make`(e.g. `mkdir ~/wg-make`), all configurations will be in here
 
-3. Generate example configurations by running `wg-make -example` in the directory created
+3. Generate an example network by running `wg-make -example` in the directory created
 
-4. Modify the example [network configuration file](#network-configuration-file) (`~/wg-make/networks/example.conf`) to your needs, there are rich comments for every field in it
+4. Modify the example [network description file](#network-description-file) (`~/wg-make/networks/example.conf`) to your needs, there are rich comments for every field in it
 
 5. Run `wg-make -clean` to generate WireGuard configuration files reflecting your changes
 
 6. Copy the generated configurations from `peers` to peers' `/etc/wireguard/` then (re)start WireGuard (e.g. `systemctl restart wg-quick@wg-YOU_NETWORK_NAME`)
 
 
-## Network Configuration File
+## Network Desctiption File
 
-Here is the example configuration file.
+Here is the example network description file.
+
+The following may look like a lot, but most of the fields have the same meaning as the WireGuard's configuration, in other words, you already know them.
 
 Feel free to submit an issue if you are not sure about the definition of some fields.
 
 ```ini
-# This file defines a network you are going to create with WireGuard.
-# With this single configuration file, wg-make generates configurations for all peers
+# This is an example of the Network Description File, it defines a network you are going to create with WireGuard.
+# With this single description file, wg-make generates configurations for all peers
 # so you only need to install WireGuard and copy the configuration file(s) to the peer and everything just works.
 #
 # NOTE: Settings without special instructions are mandatory.
@@ -132,4 +134,4 @@ PersistentKeepalive = 5
 
 ### TODO
 
-- Validate both the network and WireGuard configuration files
+- Validate network description files and WireGuard configuration files

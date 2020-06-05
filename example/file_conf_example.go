@@ -1,8 +1,8 @@
 package example
 
 // FileConfExample is the content of the example configuration file.
-const FileConfExample = `# This file defines a network you are going to create with WireGuard.
-# With this single configuration file, wg-make generates configurations for all peers
+const FileConfExample = `# This is an example of the Network Description File, it defines a network you are going to create with WireGuard.
+# With this single description file, wg-make generates configurations for all peers
 # so you only need to install WireGuard and copy the configuration file(s) to the peer and everything just works.
 #
 # NOTE: Settings without special instructions are mandatory.
