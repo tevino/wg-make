@@ -38,7 +38,7 @@
 
 ## Usage
 
-1. Install `wg-make` with `go get github.com/tevino/wg-make/cmd/`
+1. Download the latest release of `wg-make` from [here](https://github.com/tevino/wg-make/releases) then install with `install wg-make /usr/bin`
 
 2. Create a working directory for `wg-make`(e.g. `mkdir ~/wg-make`), all configurations will be in here.
 
